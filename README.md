@@ -91,7 +91,8 @@ MapFactory *factory = [[MapFactory alloc] initWithType:MapTypeWithGaode];
 UIView *mapView = [factory getMapViewWithFrame:self.view.bounds];
 [self.view addSubview:mapView];
 ```
-效果如下：![高德地图](https://upload-images.jianshu.io/upload_images/3265534-8df8459adaeaf2d0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+效果如下：      
+![高德地图](https://upload-images.jianshu.io/upload_images/3265534-8df8459adaeaf2d0.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)         
 ![百度地图](https://upload-images.jianshu.io/upload_images/3265534-fa3715611d14f703.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ### （二）工厂方法：
@@ -101,7 +102,7 @@ UIView *mapView = [factory getMapViewWithFrame:self.view.bounds];
 ![](https://upload-images.jianshu.io/upload_images/3265534-31c2c881cb7a303c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### Step 1:
-根据模型创建工厂方法协议 `IComputerFactory` 和 `IComputer` protocol。
+根据模型创建工厂方法协议 `IComputerFactory` 和 `IComputer` protocol。            
 ![](https://upload-images.jianshu.io/upload_images/3265534-42907f5aac0c52d6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 // IComputerFactory
@@ -178,8 +179,8 @@ id<IComputerFactory> factory = [[AppleComputerFactory alloc] init];
 id<IComputer> computer = [factory getComputer];
 [computer printInfo];
 ```        
-[图片上传中...(A6FFB42F-1203-455B-A3D4-93D79E6989B1.png-4078f-1522680936705-0)]
-控制台效果：![](https://upload-images.jianshu.io/upload_images/3265534-28f084aa07e5154b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+控制台效果：            
+![](https://upload-images.jianshu.io/upload_images/3265534-28f084aa07e5154b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 **通过简单工厂和工厂方法的对比，大家有没有发现简单工厂的一些弊端呢？**
 * 拓展性比较差，都在一个类中，不便于多人协同开发；
@@ -199,7 +200,7 @@ id<IComputer> computer = [factory getComputer];
 ![](https://upload-images.jianshu.io/upload_images/3265534-dd0dde95a68b59db.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### Step 1:
-根据模型创建抽象工厂协议 `IAbsComputerFactory` 、 `IAbsComputerGraphicsCard` 和 `IAbsComputerCpu` protocol。
+根据模型创建抽象工厂协议 `IAbsComputerFactory` 、 `IAbsComputerGraphicsCard` 和 `IAbsComputerCpu` protocol。           
 ![](https://upload-images.jianshu.io/upload_images/3265534-19847d33443df9f9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ```
 // IAbsComputerFactory
@@ -320,7 +321,8 @@ id<IAbsComputerCpu> cpu = [factory getCpu];
 id<IAbsComputerGraphicsCard> graphicsCard = [factory getGraphicsCard];
 [graphicsCard printInfo];
 ```       
-控制台效果：![](https://upload-images.jianshu.io/upload_images/3265534-27d8549873e7101e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+控制台效果：            
+![](https://upload-images.jianshu.io/upload_images/3265534-27d8549873e7101e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 生产联想电脑的类与上面所述的苹果类如出一辙，这里就不再阐述了。如果以后要拓展其他电脑类，只需要按照这种模式实现就可以了，简直不要太方便~
 
 ***
